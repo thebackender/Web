@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+body{
+    width: 100%;
+    background: rgba(var(--b3f,250,250,250),1);
+}
+section.content{
+    max-width: 935px;
+    margin: auto;
+    padding-top: 75px;
+    display: flex;
+}
+
+.part form{
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+    width: 300px;
+    margin-top: 20px;
+}
+.part form img.instagram{
+    width: 170px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.part form input{
+    border-radius: 3px;
+    padding: 10px 5px;
+    border: 1px solid rgb(211, 211, 211);
+    font-size: 13px;
+    background-color: #f7f7f7;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.part form button{
+    font-weight: bolder;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor:pointer;
+    background-color: rgba(125, 191, 253, 0.452);
+    width: calc(80% + 20px);
+    margin: auto;
+    margin-top: 5px;
+}
+.part form .or{
+    display: flex;
+    justify-self: space-between;
+    width: calc(80% + 20px);
+    margin: auto;
+    margin-top: 15px;
+}
+.part form .or hr{
+    width: 100px;
+    height: 0px;
+    color: #f7f7f7;
+    margin-top: 5px;
+}
+.part form .or h2{
+    font-size: 15px;
+    color: rgb(129, 129, 129);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.part form input::placeholder {
+    color: rgb(77, 77, 77);
+}
+.part a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #385185;
+}
+.part form a.facebook{
+    margin-top: 25px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.part form a.facebook span{
+    margin-left: 5px;
+}
+.part form a.forget{
+    font-size: 13px;
+}
+
+.part .signup{
+    margin-top: 20px;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    width: 300px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.part .signup a{
+    color: rgb(11, 162, 221);
+    font-weight: bold;
+}
+.part .getapp {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+}
+.part .getapp .mobile{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.part .getapp .mobile img{
+    width: 140px;
+}
+
+/*footer*/
+footer{
+    background-color: white;
+    width: 100%;
+    height: 170px;
+    bottom: 0;
+    overflow:hidden;
+    text-align: center;
+    max-width: 935px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+footer .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+footer ul li{
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+}
+footer ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #727272;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+footer .info{
+    display: flex;
+    font-size: 15px;
+    color: #727272;
+}
+footer select{
+    border: none;
+    background: white;
+    font-size: 13px;
+    color: #727272;
+    margin-right: 15px;
+    cursor: pointer;
+    width: auto;
+}
