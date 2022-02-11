@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+body{
+    font-weight: 400;
+    color: #000;
+    font-size: 15px;
+}
+.container{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+.headers{
+    justify-content: space-between;
+    display: flex;
+    font-size: 13px;
+}
+.headers__left{
+    display: flex;
+    margin-right: 20px;
+}
+.headers__right{
+    display: flex;
+}
+.headers__text{
+    padding: 25px 10px;
+    
+}
+.headers__text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.main_text_button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.block__link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.headers a{
+    text-decoration: none;
+    color:#000;
+}
+.block__links{
+    display: flex;
+    justify-content: space-between;
+}
+.block__img:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+.login{
+    display: flex;
+    padding: 25px 10px;
+}
+.logo{
+    padding: 15px 15px 15px 5px;
+}
+.logo img{
+    width: 137px;
+    margin-right: 20px;
+}
+.login img{
+    width: 32px;
+    margin-left: 15px;
+    margin-top: -5px;
+}
+.main_text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    width: 600px;
+    padding-top: 200px;
+    padding-left: 100px;
+ }
+.main_text_header{
+    font-weight: 600;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.main_text_text{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.main_text_button a{
+    border: 2px solid transparent;
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px 35px 6px 22px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+
+}
+.main_block{
+    position: relative;
+    margin-bottom: 50px;
+}
+.blocks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.block{
+    max-width: 358px;
+    width: 100%;
+}
+.block__header{
+    margin-top: 37px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    
+}
+.block__text{
+    margin-bottom: 15px;
+}
+.block__link a{
+    text-decoration: none;
+    margin-right: 40px;
+    color: #0067b8;
+    font-weight: 600;
+}
