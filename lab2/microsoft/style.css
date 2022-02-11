@@ -27,7 +27,6 @@ body{
 }
 .headers__text{
     padding: 25px 10px;
-    
 }
 .headers__text:hover{
     text-decoration: underline;
@@ -97,7 +96,6 @@ body{
     background-color: #fff;
     color: #000;
     font-weight: 600;
-
 }
 .main_block{
     position: relative;
@@ -119,7 +117,6 @@ body{
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    
 }
 .block__text{
     margin-bottom: 15px;
