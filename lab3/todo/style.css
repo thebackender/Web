@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+body{
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 75px;
+    background: #333;
+    padding-left: 10%;
+}
+header p{
+    color: rgb(209, 209, 209);
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.main{
+    width: 50%;
+    margin: 50px auto;
+    min-width: 300px;
+}
+.main p.title{
+    font-size: 30px;
+    color: #333;
+}
+.main .add{
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.main .add input{
+    width: calc(90% - 100px);
+    padding-left: 10px;
+    font-size: 20px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.main .add button{
+    width: 100px;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    background: rgb(106, 145, 228);
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*tasks*/
+.main .tasks .task{
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 50px;
+    border: 1px solid #999;
+    border-top: none;
+}
+.main .tasks .task:first-child{
+    border-radius: 6px 6px 0 0;
+    border-top: 1px solid #999;
+}
+.main .tasks .task:last-child{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.main .tasks .task img{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.main .tasks .task p{
+    line-height: 50px;
+    font-size: 18px;
+}
+.main .tasks .task p.completed{
+    text-decoration: line-through auto;
+}
+.main .tasks .task input{
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 20px;
+}
