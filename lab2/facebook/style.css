@@ -138,6 +138,8 @@ footer ul li a.add{
 }
 footer ul li a.add:hover{
     text-decoration: none;
+    width: 35px;
+    background: red;
 }
 footer .inner{
     padding-top: 20px;
