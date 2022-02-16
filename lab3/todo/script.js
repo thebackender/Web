@@ -1,33 +1,42 @@
+var tasks = [];
+
 function add(text){
     var task = document.createElement("div");
+
+    /* Checkbox */
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.onclick = function(){
+        var cur = this.parentNode.getElementsByTagName('p')[0];
+        if(cur.classList.contains('completed')) cur.classList.remove('completed');
+        else cur.classList.add('completed');
+    }
     task.appendChild(checkbox);
 
+    /*Text */
     var t = document.createElement("p");
     t.innerHTML = text;
     task.appendChild(t);
+
+    /*Deletion*/
     var img = document.createElement("img");
     img.src = "trash.png";
+    img.onclick = function(){
+        var del = this.parentNode;
+        del.parentNode.removeChild(del);
+    }
     task.appendChild(img);
 
     task.className = 'task';
     document.getElementsByClassName('tasks')[0].appendChild(task);
+
+    tasks[tasks.length] = text;
+    console.log(tasks);
 }
 
 document.getElementById('plus').onclick = function(){
-    add(document.getElementsByTagName('input')[0].value);
+    var val = document.getElementsByTagName('input')[0].value;
+    if(val) add(val);
+    else alert("Fill input");
 }
-/*
-setInterval(function(){
-    var checks = document.getElementsByClassName('task');
-    for(var i = 0; i < checks.length; i++){
-        checks[i].getElementsByTagName('input')[0].onclick = function(){
-            if(checks[i].getElementsByTagName('p')[0].className == 'completed'){
-                checks[i].getElementsByTagName('p')[0].classList.add = 'completed';
-            }else{
-                checks[i].getElementsByTagName('p')[0].classList.remove = 'completed';
-            }
-        }
-    }
-}, 100);*/
+
