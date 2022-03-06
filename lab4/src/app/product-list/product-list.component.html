@@ -1,5 +1,5 @@
 <h2>Products</h2>
-<div *ngFor="let product of products">
+<!--<div *ngFor="let product of products">
     <h3>
         <a [title]="product.name + ' details'">
             {{product.name}}
@@ -14,6 +14,12 @@
     <app-product-alerts [product]="product" (notify)="onNotify()">
 
     </app-product-alerts>
+</div>-->
+
+<div *ngFor="let product of amazon">
+    <app-product-item [product]="product" (redirect)="redirect(product.name)">
+
+    </app-product-item>
 </div>
 
 <!-- 

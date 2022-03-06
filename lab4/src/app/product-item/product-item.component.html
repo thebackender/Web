@@ -1,0 +1,16 @@
+<div class="item">
+    <img [src]="product.image" alt="">
+    <div class="a">
+        <h4>{{product.name}}</h4>
+        <p *ngIf="product.description; else no_desc">{{product.description}}</p>
+        <ng-template #no_desc>
+            <p>No description</p>
+        </ng-template>
+        <label>Rating:</label>
+        <progress [value]="product.rating" max="5"></progress>
+        <span>{{product.rating}}/5</span><br><br>
+        <button (click)="redirect.emit()">
+            Share
+        </button>
+    </div>
+</div>
