@@ -1,5 +1,3 @@
-var tasks = [];
-
 function add(text){
     var task = document.createElement("div");
 
@@ -30,8 +28,6 @@ function add(text){
     task.className = 'task';
     document.getElementsByClassName('tasks')[0].appendChild(task);
 
-    tasks[tasks.length] = text;
-    console.log(tasks);
 }
 
 document.getElementById('plus').onclick = function(){
