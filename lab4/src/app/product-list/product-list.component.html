@@ -17,7 +17,7 @@
 </div>-->
 
 <div *ngFor="let product of amazon">
-    <app-product-item [product]="product" (redirect)="redirect(product.name)">
+    <app-product-item [product]="product" (redirect)="redirect(product.link, product.description)" (open)="open(product.id)">
 
     </app-product-item>
 </div>

@@ -1,5 +1,5 @@
 <div class="item">
-    <img [src]="product.image" alt="">
+    <img [src]="product.image" alt="" (click)="open.emit()">
     <div class="a">
         <h4>{{product.name}}</h4>
         <p *ngIf="product.description; else no_desc">{{product.description}}</p>
@@ -13,4 +13,7 @@
             Share
         </button>
     </div>
+</div>
+<div class="gallery" *ngIf="product.open_gallery">
+    <img *ngFor="let img of product.gallery" [src]="img">
 </div>

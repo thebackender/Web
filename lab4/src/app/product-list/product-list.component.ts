@@ -18,8 +18,11 @@ export class ProductListComponent {
   onNotify(){
     window.alert('You will be notified when the product goes on sale');
   }
-  redirect(id?:any){
-    window.alert(id);
+  redirect(link?:string, description?:string){
+    window.location.href = 'https://t.me/share/url?url='+link+'&text='+description;
+  }
+  open(id?:any){
+    this.amazon[id-1].open_gallery = !this.amazon[id-1].open_gallery;
   }
 }
 
