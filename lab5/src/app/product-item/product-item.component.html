@@ -1,0 +1,25 @@
+<div *ngIf="product.category == cat && !product.hide" class="item">
+    <img [src]="product.image" alt="" (click)="open.emit()">
+    <div class="a">
+        <h4>{{product.name}}</h4>
+        <p *ngIf="product.description; else no_desc">{{product.description}}</p>
+        <ng-template #no_desc>
+            <p>No description</p>
+        </ng-template>
+        <label>Rating:</label>
+        <progress [value]="product.rating" max="5"></progress>
+        <span>{{product.rating}}/5</span><br><br>
+        <button (click)="redirect.emit()">
+            Share
+        </button>
+        <button (click)="like.emit()">
+            Like: {{product.likes}}
+        </button>
+        <button (click)="remove.emit()">
+            Remove
+        </button>
+    </div>
+</div>
+<div class="gallery" *ngIf="product.open_gallery">
+    <img *ngFor="let img of product.gallery" [src]="img">
+</div>

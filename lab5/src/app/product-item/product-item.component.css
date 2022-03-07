@@ -1,0 +1,17 @@
+.item{
+    display: flex;
+    margin-bottom: 20px;
+}
+.item img{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+.gallery{
+    display: flex;
+}
+.gallery img{
+    max-width: 200px;
+    margin-left: 10px;
+    max-height: 200px;
+}
