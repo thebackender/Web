@@ -9,6 +9,7 @@ import { AlbumsService } from '../albums.service';
 })
 export class AlbumsComponent implements OnInit {
   albums: Album[] = [];
+  newAlbum: string = '';
 
   constructor(private albumsService: AlbumsService) { }
 
@@ -18,6 +19,18 @@ export class AlbumsComponent implements OnInit {
   getAlbums(){
     this.albumsService.getAlbums().subscribe((res) => {
       this.albums = res
+    })
+  }
+  deleteAlbum(id:number){
+    this.albums = this.albums.filter((x) => x.id !== id);
+    this.albumsService.deleteAlbum(id).subscribe(() => {
+      console.log('deleted', id);
+    });
+  }
+  addAlbum(){
+    this.albumsService.addAlbum({title: this.newAlbum} as Album).subscribe((res)=>{
+      this.albums.push(res);
+      this.newAlbum = '';
     })
   }
 

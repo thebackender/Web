@@ -12,8 +12,7 @@ import { Location } from '@angular/common';
 })
 export class AlbumDetailComponent implements OnInit {
   album: Album;
-
-
+  
   constructor(private albumsService: AlbumsService, private route: ActivatedRoute, public location: Location) { }
 
   ngOnInit(): void {
@@ -27,5 +26,10 @@ export class AlbumDetailComponent implements OnInit {
         this.album = res;
       });
     });
+  }
+  updateAlbum(){
+    this.albumsService.updateAlbum(this.album).subscribe((res)=>{
+      console.log(res);
+    })
   }
 }
