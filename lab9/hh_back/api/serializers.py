@@ -8,7 +8,6 @@ class VacancySerializer(serializers.ModelSerializer):
         fields = ('name', 'description', 'salary', 'company')
 
 class CompanySerializer(serializers.ModelSerializer):
-    vacancies = VacancySerializer(many=True)
     class Meta:
         model = Company
-        fields = ('name', 'description', 'city', 'address', 'vacancies')
+        fields = ('name', 'description', 'city', 'address')
